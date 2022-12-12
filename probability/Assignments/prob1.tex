@@ -1,0 +1,69 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{graphicx}
+\usepackage[cmex10]{amsmath}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./figs/}}{}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\usepackage{listings}
+\usepackage{watermark}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{mathtools}
+\usepackage{titlesec}
+\usepackage[thinc]{esdiff}
+\let\vec\mathbf
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+%\thiswatermark{\centering \put(0,-105.0){\includegraphics[scale=0.5]{iith.png}} }
+
+\title{\mytitle}
+\title
+{ Probability Assignment - 1
+}
+\author{Adarsh Kumar (FWC22068)}
+\begin{document}
+\maketitle
+\tableofcontents
+\bigskip
+
+
+\section{Problem}
+NCERT class -11 , Ex: 16.4 , Q1 :\\
+A box contains 10 red marbles , 20 Blue marbles and 30 green marbles . 5 marbles are drawn from the box , what is the probability that 
+\linebreak
+1) all will be blue 
+\\
+2) atleast one will be green 
+\\
+
+\section{Solution}
+From the question it is given that ,
+\\
+No. of red marbles in the box = 10.
+\\
+No. of blue marbles in the box = 20.
+\\
+No. of green marbles in the box = 30.
+\\
+So,The total No. of marbles in the box =60.\\
+Number of ways of drawing 5 marbles from 60 marbles = $\comb{60}{5}$ 
+\\
+1) All the drawn marbles will be blue if we draw 5 marbles out of 20 marbles.
+\\
+Number of ways of drawing 5 Blue marbles from 20 blue marbles = $ \comb{20}{5}$
+\\
+then , 
+\\
+the probability that all marbles will be blue = $ \frac{\comb{20}{5}}{\comb{60}{5}} $    
+\\
+2) Number of ways in which the drawn marble is not green = $\comb{30}{5}$
+\\
+Probability that atleast one marble is green = $1 - \comb{30}{5}$
+
+\end{document}
